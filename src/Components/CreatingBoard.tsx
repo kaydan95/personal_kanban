@@ -37,7 +37,7 @@ const CreateFromWrapper = styled.div`
     align-items: center;
     justify-content: center;
     padding : 20px;
-    overflow-x : hidden;
+    overflow : hidden;
     transition : width 0.3s linear;
     p {
         position: relative;
