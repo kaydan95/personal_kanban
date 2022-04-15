@@ -27,7 +27,7 @@
 ✔️framer-motion 으로 더 간편하게 animation을 구현할 수 있을 것 같다.
 
 #### 2. Local Storage 에 저장
-- 챌린지 내용 중에 Board와 해당 todo의 내용들을 Local Storage에 저장하기 라는 항목이 있었다. 그렇게 하려면 LocalStorage 에 저장한 후 해당 Board 에 todo를 추가해야하기 때문에 LocalStorage 내용을 default 로 한 채 호출과 수정을 해야했다. 이 부분에서 조금 끙끙대다 같은 강의를 듣고 챌린지를 하신 분의 페이지를 통해 도움을 받아 해결할 수 있었다.(:pleading_face:).   
+- 챌린지 내용 중에 Board와 해당 todo의 내용들을 Local Storage에 저장하기 라는 항목이 있었다. 그렇게 하려면 LocalStorage 에 저장한 후 해당 Board 에 todo를 추가해야하기 때문에 LocalStorage 내용을 default 로 한 채 호출과 수정을 해야했다. 이 부분에서 조금 끙끙대다 같은 강의를 듣고 챌린지를 하신 분의 페이지를 통해 도움을 받아 해결할 수 있었다.:pleading_face:   
 - Board 를 생성하고 todo를 작성 할 때마다 해당 내용들이 저장되어야하기 때문에 바로 Local Storage로 저장하는 함수를 `storage.util.ts` 라는 파일을 생성 후 다음과 같이 함수를 정의했다.
 
 ```typescript
