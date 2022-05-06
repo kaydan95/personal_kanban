@@ -26,9 +26,6 @@ const CreateForm = styled.form`
 `
 
 const CreateFromWrapper = styled.div`
-    /* position: absolute; */
-    /* top : 20px;
-    left : 20px; */
     width : 3.5em;
     height : 3.5em;
     border-radius: 50px;
@@ -37,7 +34,7 @@ const CreateFromWrapper = styled.div`
     align-items: center;
     justify-content: center;
     padding : 20px;
-    overflow : hidden;
+    overflow-y: hidden;
     transition : width 0.3s linear;
     p {
         position: relative;
