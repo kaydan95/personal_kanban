@@ -6,6 +6,7 @@ import { toDoState } from './atoms';
 import Board from './Components/Board';
 import CreatingBoard from './Components/CreatingBoard';
 import { saveTaskInLocalStorage } from './storage.util';
+import { Helmet } from 'react-helmet';
 
 
 const Wrapper = styled.div`
@@ -112,25 +113,31 @@ function App() {
   }
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
-      <Wrapper>
-        <Header>
-          <CreatingBoard/>
-        </Header>
-        <Content>
-          <Droppable droppableId='Boards' direction='horizontal' type='BOARD'>
-            {(provided) => (
-              <Boards ref={provided.innerRef} {...provided.droppableProps}>
-                {Object.keys(toDos).map((boardId:string, index:number) => (
-                  <Board toDos={toDos[boardId]} boardId={boardId} key={boardId} index={index}/>
-                ))}
-                {provided.placeholder}
-              </Boards>
-            )}
-          </Droppable>
-        </Content>
-      </Wrapper>
-    </DragDropContext>
+    <>
+      <Helmet>
+        <title>K'S PERSONAL KANBAN</title>
+      </Helmet>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Wrapper>
+          <Header>
+            <CreatingBoard/>
+          </Header>
+          <Content>
+            <Droppable droppableId='Boards' direction='horizontal' type='BOARD'>
+              {(provided) => (
+                <Boards ref={provided.innerRef} {...provided.droppableProps}>
+                  {Object.keys(toDos).map((boardId:string, index:number) => (
+                    <Board toDos={toDos[boardId]} boardId={boardId} key={boardId} index={index}/>
+                  ))}
+                  {provided.placeholder}
+                </Boards>
+              )}
+            </Droppable>
+          </Content>
+        </Wrapper>
+      </DragDropContext>
+    </>
+
   );
 }
 
